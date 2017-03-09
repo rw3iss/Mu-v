@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import { hashHistory } from 'react-router';
-import { debounce, throttle } from 'lodash';
+import { throttle } from 'lodash';
 import Animate from 'rc-animate';
 import Header from 'components/shared/header';
 import View from 'components/shared/view';
