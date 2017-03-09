@@ -1,0 +1,24 @@
+@import '~components/style/vars';
+
+:global {
+
+#player {
+	color: white;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.iframe-wrapper {
+		flex: 1 0 100%;
+		width: 100%;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+	}
+}
+
+}

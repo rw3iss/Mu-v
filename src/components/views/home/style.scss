@@ -1,0 +1,62 @@
+@import '~components/style/vars';
+
+:global {
+
+#home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.logo {
+		font-size: 42pt;
+		color: white;
+		font-weight: bold;
+		width: 100%;
+		text-align: center;
+		padding: $itemPadding;
+		margin-bottom: $itemPadding*2;
+	}
+
+	.nav-container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: $itemPadding*4;
+
+		nav {
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			min-width: 200px;
+			max-width: 500px;
+			width: 100%;
+			background: rgba(255,255,255,.3);
+			border-radius: $itemPadding;
+			overflow: hidden;
+
+			a {
+				display: block;
+				width: 100%;
+				padding: $itemPadding;
+				color: #fafafa;
+				font-weight: bold;
+				font-size: 18pt;
+				text-align: center;
+
+				&:hover {
+					background: rgba(255,255,255,.2);
+					color: #fff;
+				}
+
+				&:active {
+					position: relative;
+					top: 1px;
+				}
+			}
+		}
+	}
+}
+
+}

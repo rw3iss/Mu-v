@@ -1,0 +1,73 @@
+@import 'vars';
+@import 'normalize';
+
+:global {
+
+	/* Begin app stuff */
+	#app {
+		height: 100%;
+
+		.app-container {
+			height: 100%;
+
+			.view-wrapper {
+				height: 100%;
+				overflow: auto;
+				background: $appBackgroundColor url(./../../assets/images/space_bg.jpg) no-repeat center center;
+				background-size: cover;
+
+				.view {
+					height: 100%;
+
+					&.with-header {
+						padding-top: $headerHeight;
+					}
+
+					h1 {
+						font-size: 1.5em;
+					}
+				}
+			}
+		}
+	}
+
+	h1,h2,h3,h4,h5 {
+		margin: 0;
+	}
+	
+	i {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+	}
+
+	// for the old heads
+	.clearfix:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	.content-transition-appear {
+	  opacity: 0;
+	  transition: opacity $pageTransitionTime ease-in;
+	}
+
+	.content-transition-appear.content-transition-appear-active {
+	  opacity: 1;
+	  transition: opacity $pageTransitionTime ease-in;
+	}
+
+	.content-transition-leave {
+		opacity: 1;
+	}
+
+	.content-transition-leave.content-transition-leave-active {
+	  opacity: 0;
+	  transition: opacity $pageTransitionTime ease-in;
+	}
+}
+
+@import 'layout';
+@import 'controls';

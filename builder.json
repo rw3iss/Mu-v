@@ -1,0 +1,16 @@
+{
+  "osx" : {
+    "title": "Movie",
+    "background": "src/assets/images/space_bg.jpg",
+    "icon": "src/assets/icons/apple-touch-icon.png",
+    "icon-size": 128,
+    "contents": [
+      { "x": 355, "y": 125, "type": "link", "path": "/Applications" },
+      { "x": 155, "y": 125, "type": "file" }
+    ]
+  },
+  "win" : {
+    "title" : "Movie",
+    "icon" : "src/assets/icons/apple-touch-icon.png""
+  }
+}

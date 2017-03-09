@@ -1,0 +1,69 @@
+@import '~components/style/vars';
+
+.header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: $headerHeight;
+	padding: 0;
+	background: rgba(36, 69, 122, 0);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		background: rgba(36, 69, 122, .2);
+	}
+
+	h1 {
+		float: left;
+		margin: 0;
+		padding: 0 15px;
+		font-size: 24px;
+		line-height: $headerHeight;
+		font-weight: 400;
+		color: #FFF;
+		flex: 1;
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	.search {
+		margin-right: $itemPadding;
+
+		input {
+			padding: 10px;
+			font-size: 1.4em;
+			border: none;
+			background: rgba(255,255,255,.8);
+			border-radius: 5px;
+		}
+	}
+
+	nav {
+		justify-content: flex-end;
+		font-size: 100%;
+
+		a {
+			display: inline-block;
+			height: $headerHeight;
+			line-height: $headerHeight;
+			padding: 0 15px;
+			min-width: 50px;
+			text-align: center;
+			background: rgba(255,255,255,0);
+			text-decoration: none;
+			color: #EEE;
+			will-change: background-color;
+
+			&:hover, &:active {
+				background: rgba(255,255,255,0.3);
+			}
+		}
+	}
+}

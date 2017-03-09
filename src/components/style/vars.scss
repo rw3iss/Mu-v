@@ -1,0 +1,34 @@
+/* layout padding */
+$headerHeight: 50px;
+$pagePadding: 20px 20px;
+$itemPadding: 15px;
+
+/* cross-browser constants */
+$col2: 50%;   // 1/2
+$col3: 33.2%; // 1/3
+$col4: 24.9%; // 1/4
+$col5: 19.9%; // 1/5
+
+/* button controls */
+$buttonHeight: 34px;
+$buttonHeightSmall: 24px;
+$buttonHeightLarge: 40px;
+$buttonHeightMobile: $buttonHeight;
+$buttonFontSize: 16px;
+$buttonFontSizeMobile: 16px;
+
+/* breakpoints */
+$bp-mobile: 768px;
+$bp-medium: 1024px;
+
+/* colors */
+$blue: #4286f4;
+$gray: #aaaaaa;
+$appBackgroundColor: #112;
+$btnDefaultColor: $blue;
+$navHoverColor: #77a5fa;
+$linkColor: #55f;
+$linkColorHover: lighten($linkColor, 10%);
+
+/* animation timings */
+$pageTransitionTime: .15s;

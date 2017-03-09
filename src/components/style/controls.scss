@@ -1,0 +1,132 @@
+@import './vars';
+
+$btnColor: $btnDefaultColor;
+$btnDisabledColor: lighten($gray, 15%);
+$btnColorHover: lighten($btnColor, 4%);
+$btnShadow: 0px 0px 0px rgba(50,50,50,.5);
+$btnShadowHover: 1px 1px 6px rgba(40,40,40,.5);
+
+:global {
+
+%btnBase {
+	font-size: $buttonFontSize;
+	font-weight: 500;
+	min-width: 100px;
+	height: $buttonHeight;
+	min-height: $buttonHeight;
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	color: white;
+	letter-spacing: 1px;
+	border-radius: 5px;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    background-color: $btnColor;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: $btnShadow;
+    transition: all .2s ease;
+    padding: 3px 15px;
+    text-decoration: none;
+    border: none;
+    box-sizing: content-box;
+
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all .2s ease;
+}
+
+%btnSmall {
+	height: $buttonHeightSmall;
+	min-height: $buttonHeightSmall;
+	min-width: 50px;
+	font-size: 14px;
+	padding: 3px 9px;
+}
+
+.btn { 
+	@extend %btnBase;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: white;
+		text-decoration: none;
+    	background-color: $btnColorHover;
+    	box-shadow: $btnShadowHover;
+	}
+
+	&.disabled {
+		background: $btnDisabledColor;
+		color: darken(white, 5%);
+
+		&:hover {
+			box-shadow: none;
+			cursor: default;
+		}
+	}
+}
+
+.btn-default {
+	@extend %btnBase;
+}
+
+.btn-small {
+	@extend %btnSmall;
+}
+
+.btn-large {
+	height: $buttonHeightLarge;
+	min-height: $buttonHeightLarge;
+	font-size: 1.1em;
+	padding-left: 1.2em;
+	padding-right: 1.2em
+}
+
+.btn-blue { 
+	background-color: $blue; 
+
+	&:hover {
+		background-color: lighten($blue, 4%);
+    	box-shadow: 2px 2px 5px rgba(50,50,50,.5);
+	}
+}
+
+.btn-outline {
+	color: white;
+	background-color: $blue;
+	border: 3px solid #fff;
+  	box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+	overflow: visible;
+	margin-bottom: 10px;
+	transition: all .4s ease;
+
+	&:hover {
+		color: white;
+		border: 3px solid #fff;
+		background-color: lighten($blue, 5%);
+		box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+	}
+}
+
+.btn.squared,
+.btn-squared {
+	border-radius: 0;
+}
+
+}
